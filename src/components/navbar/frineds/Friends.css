@@ -1,0 +1,15 @@
+.friend__list {
+  justify-content: space-between;
+}
+
+.friend__item {
+  flex-direction: column;
+}
+
+.friend__image {
+  width: 60px;
+}
+
+.friend__name {
+  text-align: center;
+}

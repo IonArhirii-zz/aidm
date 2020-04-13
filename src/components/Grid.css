@@ -1,0 +1,38 @@
+/*.header {*/
+/*  grid-area: header;*/
+/*}*/
+
+.nav {
+  grid-area: nav;
+}
+
+.main {
+  grid-area: mainContent;
+}
+
+.main-container {
+  grid-area: mainContainer;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/*.wrapper {*/
+/*  display: grid;*/
+/*  grid-template-rows: 60px 1fr 60px;*/
+/*  grid-gap: 15px;*/
+/*  grid-template-areas: */
+/*  "header header"*/
+/*  "mainContainer mainContainer"*/
+/*  "footer footer";*/
+/*}*/
+
+.main-container {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  grid-gap: 30px;
+  grid-template-areas: 
+  "nav mainContent";
+}
+

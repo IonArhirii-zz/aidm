@@ -1,18 +1,13 @@
 import React from 'react';
-import s from './Friends.module.css';
+import './../Friends.css';
 
-const Friends = (props) => {
+const Friend = (props) => {
   return (
-    <div className={s.frineds}>
-      <h3>Friends</h3>
-      <div className={s.friendsList}>
-        <div className={s.friedsItem}>
-          <div className={s.friendsImage}>image</div>
-          <div className={s.friedsName}>Name</div>
-        </div>
-      </div>
+    <div className="friend__item d-flex">
+      <div className="friend__image"><img src={props.image} alt={props.name} /></div>
+      <div className="friend__name">{props.name}</div>
     </div>
   );
-}
+};
 
-export default Friends;
+export default Friend;

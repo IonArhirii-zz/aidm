@@ -1,0 +1,28 @@
+.profile__inner {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  grid-gap: 15px;
+  font-size: 14px;
+}
+
+.profile__avatar {
+  width: 120px;
+}
+
+.profile__name {
+  margin-bottom: 20px;
+}
+
+.profile__row {
+  display: flex;
+  line-height: 1.5;
+}
+
+.profile__row:last-child {
+  margin-bottom: 0;
+}
+.label {
+  margin-right: 10px;
+  font-style: italic;
+  width: 100px;
+}

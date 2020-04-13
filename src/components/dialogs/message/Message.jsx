@@ -1,9 +1,12 @@
 import React from "react";
+import s from'./../Dialogs.module.css';
 
 
 const Message = (props) => {
   return (
-    <div className={s.message}>{props.message}</div>
+    <div className={s.messageRow}>
+      <div className={s.message + ' ' + s.myMessage}>{props.message}</div>
+    </div>
   );
 }
 
