@@ -81,3 +81,21 @@ ul {
 .d-flex {
   display: flex;
 }
+
+.preloadWrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.preloaderGif {
+  height: auto;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  width: 100px;
+  transform: translate(-50%,-50%);
+}
