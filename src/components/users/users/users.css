@@ -1,3 +1,23 @@
 .userPhoto__wrapper {
   width: 100px;
 }
+
+.pager {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.pager li {
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.pager li:hover {
+  opacity: 0.7;
+}
+
+.selectedPage {
+  font-weight: bold;
+}
