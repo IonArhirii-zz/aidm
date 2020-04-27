@@ -6,13 +6,7 @@ import MyPostsContainer from "./MyPosts/MyPostsContainer";
 const Profile = (props) => {
   return (
     <div>
-      <div className="hero-banner default-margin-b">
-        <div className="hero-banner__image">
-          <img className="d-block" src="https://www.crbusa.com/wp-content/uploads/2016/12/site-selection-decision-making-maze-1920x640.jpg"
-               alt="hero-banner"/>
-        </div>
-      </div>
-      <ProfileInfo />
+      <ProfileInfo profile={props.profile}/>
       <MyPostsContainer />
     </div>
   );

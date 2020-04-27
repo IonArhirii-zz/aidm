@@ -5,12 +5,12 @@ import {BrowserRouter, Route} from "react-router-dom";
 import Header from './components/header/Header';
 import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
-import Profile from "./components/profile/Profile";
 import News from "./components/news/News";
 import Music from "./components/music/Music";
 import Settings from "./components/settings/Settings";
 import DialogsContainer from "./components/dialogs/DialogsContainer";
 import UsersContainer from "./components/users/UsersContainer";
+import ProfileContainer from "./components/profile/ProfileContainer";
 
 const App = (props) => {
   return (
@@ -23,8 +23,8 @@ const App = (props) => {
             <main className="main">
               <Route path="/dialogs"
                      render={() => <DialogsContainer />}/>
-              <Route path="/profile" 
-                     render={() => <Profile />} />
+              <Route path="/profile/:userId?" 
+                     render={() => <ProfileContainer />} />
               <Route path="/users" 
                      render={() => <UsersContainer />} />
               <Route path="/news" component={News}/>
