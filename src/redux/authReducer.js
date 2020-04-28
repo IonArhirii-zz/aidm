@@ -8,7 +8,7 @@ let initialState = {
   isAuth: false
 };
 
-const authReduser = (state = initialState, action) => {
+const authReducer = (state = initialState, action) => {
   switch(action.type) {
     case SET_USER_DATA: {
       return {
@@ -25,4 +25,4 @@ const authReduser = (state = initialState, action) => {
 export const setAuthUserData = (userId, email, login) => (
   { type: SET_USER_DATA, data: { userId, email, login }});
 
-export default authReduser;
+export default authReducer;
