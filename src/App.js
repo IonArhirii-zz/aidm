@@ -11,6 +11,7 @@ import DialogsContainer from "./components/dialogs/DialogsContainer";
 import UsersContainer from "./components/users/UsersContainer";
 import ProfileContainer from "./components/profile/ProfileContainer";
 import HeaderContainer from "./components/header/HeaderContainer";
+import Login from "./login/Login";
 
 const App = (props) => {
   return (
@@ -30,6 +31,8 @@ const App = (props) => {
               <Route path="/news" component={News}/>
               <Route path="/music" component={Music}/>
               <Route path="/settings" component={Settings}/>
+              <Route path="/login"
+                     render={() => <Login />} />
             </main>
           </div>
         </div>
