@@ -29,10 +29,6 @@ const Dialogs = (props) => {
       <div className={s.messages}>
         { messagesElements }
 
-        {/*<NewMessage
-          newMessageBody={state.newMessageBody}
-          dispatch={props.dispatch} />*/}
-
         <div className={s.newMessage}>
           <div className="block__post-message default-margin-b">
             <textarea className="textarea"
