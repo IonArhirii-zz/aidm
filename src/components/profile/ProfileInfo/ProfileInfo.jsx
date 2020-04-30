@@ -3,6 +3,8 @@ import './ProfileInfo.css';
 import Preloader from "../../common/preloader/Preloader";
 import lookingForAJob from '../../../assets/img/looking_for_a_job.jpg';
 import notInterested from '../../../assets/img/not_interested.jpeg';
+import ProfileStatus from './ProfileStatus';
+import defaulImage from './../../../assets/img/male-icon.png';
 
 const ProfileInfo = (props) => {
   if (!props.profile) {
@@ -11,23 +13,26 @@ const ProfileInfo = (props) => {
   
   return (
     <div>
-      <div className="hero-banner default-margin-b">
+      {/*<div className="hero-banner default-margin-b">
         <div className="hero-banner__image">
           <img className="d-block" src="https://www.crbusa.com/wp-content/uploads/2016/12/site-selection-decision-making-maze-1920x640.jpg"
                alt="hero-banner"/>
         </div>
-      </div>
+      </div>*/}
       
       <div className="profile default-margin-b">
         <div className="profile__inner">
           <div className="profile__avatar">
             <img className="profile__avatar--image"
-                 src={props.profile.photos.large} alt="avatar"/>
+                 src={props.profile.photos.large === null ? defaulImage : props.profile.photos.large} alt="avatar"/>
           </div>
           <div className="profile__info">
             <h3 className="profile__name">
               {props.profile.fullName}
             </h3>
+            
+            <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
+            
             <div className="profile__row profile__birth-day">
               <div className="label profile__birth-day-label">
                 Date of Birth:
