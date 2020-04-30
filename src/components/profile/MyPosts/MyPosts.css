@@ -1,11 +1,11 @@
 input,
 textarea,
 .button {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -o-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
+  /*-moz-appearance: none;*/
+  /*-webkit-appearance: none;*/
+  /*-o-appearance: none;*/
+  /*-ms-appearance: none;*/
+  /*appearance: none;*/
   -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   -o-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -26,17 +26,19 @@ textarea,
 }
 
 input,
+.button,
 textarea {
   background-color: rgba(144, 144, 144, 0.075);
 }
 
 input:focus,
+.button:hover,
+.button:active,
 textarea:focus {
-  background-color: transparent;
+  background-color: white;
 }
 
 .button {
-  background-color: transparent;
   text-transform: uppercase;
   letter-spacing: 0.125em;
   font-size: 0.9em;
@@ -45,14 +47,6 @@ textarea:focus {
   height: 2.85em;
   line-height: 2.85em;
   white-space: nowrap;
-}
-
-.button:hover {
-  background-color: rgba(144, 144, 144, 0.075);
-}
-
-.button:active {
-  background-color: rgba(144, 144, 144, 0.2);
 }
 
 .block__post-message textarea,
