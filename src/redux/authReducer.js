@@ -1,8 +1,7 @@
 import {authAPI, usersAPI} from "../api/api";
-import {toggleFollowingProgress, unfollowSuccess} from "./usersReducer";
+import {stopSubmit} from "redux-form";
 
 const SET_USER_DATA = 'SET_USER_DATA';
-// const UNFOLLOW = 'UNFOLLOW';
 
 let initialState = {
   userId: null,
@@ -38,10 +37,15 @@ export const getAuthUserData = () => (dispatch) => {
 };
 
 export const login = (email, password, rememberMe) => (dispatch) => {
+  
   authAPI.login(email, password, rememberMe)
     .then(response => {
       if (response.data.resultCode === 0) {
         dispatch(getAuthUserData());
+      } else {
+        let message = response.data.messages.length > 0 ? response.data.messages[0]
+          : 'Some Error';
+        dispatch(stopSubmit('login', {_error: message}));
       }
     });
 };
