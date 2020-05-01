@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import './components/Grid.css';
-import {BrowserRouter, Route} from "react-router-dom";
+import {Route, withRouter} from "react-router-dom";
 import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
 import News from "./components/news/News";
@@ -12,34 +12,52 @@ import UsersContainer from "./components/users/UsersContainer";
 import ProfileContainer from "./components/profile/ProfileContainer";
 import HeaderContainer from "./components/header/HeaderContainer";
 import Login from "./login/Login";
+import {connect} from "react-redux";
+import {compose} from "redux";
+import Preloader from "./components/common/preloader/Preloader";
+import {initializeApp} from "./redux/appReducer";
 
-const App = (props) => {
-  return (
-    <BrowserRouter>
+class App extends React.Component {
+  componentDidMount() {
+    this.props.initializeApp();    
+  }
+  
+  render() {
+    if (!this.props.initialized) {
+
+      return <Preloader/>
+    }
+    return (
       <div className="wrapper">
-        <HeaderContainer />
+        <HeaderContainer/>
         <div className="container">
           <div className="main-container">
-            <NavBar />
+            <NavBar/>
             <main className="main">
               <Route path="/dialogs"
-                     render={() => <DialogsContainer />}/>
-              <Route path="/profile/:userId?" 
-                     render={() => <ProfileContainer />} />
-              <Route path="/users" 
-                     render={() => <UsersContainer />} />
+                     render={() => <DialogsContainer/>}/>
+              <Route path="/profile/:userId?"
+                     render={() => <ProfileContainer/>}/>
+              <Route path="/users"
+                     render={() => <UsersContainer/>}/>
               <Route path="/news" component={News}/>
               <Route path="/music" component={Music}/>
               <Route path="/settings" component={Settings}/>
               <Route path="/login"
-                     render={() => <Login />} />
+                     render={() => <Login/>}/>
             </main>
           </div>
         </div>
         <Footer/>
       </div>
-    </BrowserRouter>
-  );
-};
+    );
+  }
+}
 
-export default App;
+const mapStateToProps =(state) => ({
+  initialized: state.app.initialized
+});
+
+export default compose(
+  withRouter,
+  connect(mapStateToProps, {initializeApp}))(App);
