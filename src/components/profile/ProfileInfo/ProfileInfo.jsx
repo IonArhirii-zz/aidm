@@ -5,6 +5,7 @@ import lookingForAJob from '../../../assets/img/looking_for_a_job.jpg';
 import notInterested from '../../../assets/img/not_interested.jpeg';
 import ProfileStatus from './ProfileStatus';
 import defaulImage from './../../../assets/img/male-icon.png';
+import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
 const ProfileInfo = (props) => {
   if (!props.profile) {
@@ -31,7 +32,7 @@ const ProfileInfo = (props) => {
               {props.profile.fullName}
             </h3>
             
-            <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
+            <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
             
             <div className="profile__row profile__birth-day">
               <div className="label profile__birth-day-label">
