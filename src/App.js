@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import './App.css';
 import './components/Grid.css';
 import {Route, withRouter} from "react-router-dom";
@@ -6,10 +6,7 @@ import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
 import News from "./components/news/News";
 import Music from "./components/music/Music";
-import Settings from "./components/settings/Settings";
-import DialogsContainer from "./components/dialogs/DialogsContainer";
-import UsersContainer from "./components/users/UsersContainer";
-import ProfileContainer from "./components/profile/ProfileContainer";
+import Settings from "./components/settings/Settings";import UsersContainer from "./components/users/UsersContainer";
 import HeaderContainer from "./components/header/HeaderContainer";
 import Login from "./login/Login";
 import {connect, Provider} from "react-redux";
@@ -17,8 +14,11 @@ import {compose} from "redux";
 import Preloader from "./components/common/preloader/Preloader";
 import {initializeApp} from "./redux/appReducer";
 import store from "./redux/reduxStore";
-
 import {BrowserRouter} from "react-router-dom";
+import {withSuspense} from "./hoc/withSuspense";
+
+const DialogsContainer = React.lazy(() => import('./components/dialogs/DialogsContainer'));
+const ProfileContainer = React.lazy(() => import('./components/profile/ProfileContainer'));
 
 class App extends React.Component {
   componentDidMount() {
@@ -38,9 +38,9 @@ class App extends React.Component {
             <NavBar/>
             <main className="main">
               <Route path="/dialogs"
-                     render={() => <DialogsContainer/>}/>
+                     render={withSuspense(DialogsContainer)}/>
               <Route path="/profile/:userId?"
-                     render={() => <ProfileContainer/>}/>
+                     render={withSuspense(ProfileContainer)}/>
               <Route path="/users"
                      render={() => <UsersContainer/>}/>
               <Route path="/news" component={News}/>
@@ -71,6 +71,6 @@ const SamuraiJSApp = (props) => {
       <AppContainer />
     </Provider>
   </BrowserRouter>
-}
+};
 
 export default SamuraiJSApp;
