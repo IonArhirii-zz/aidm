@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/aidm/static/css/main.f5c4d8e1.chunk.css",
-    "main.js": "/aidm/static/js/main.5c24f077.chunk.js",
-    "main.js.map": "/aidm/static/js/main.5c24f077.chunk.js.map",
+    "main.js": "/aidm/static/js/main.f5f06e79.chunk.js",
+    "main.js.map": "/aidm/static/js/main.f5f06e79.chunk.js.map",
     "runtime-main.js": "/aidm/static/js/runtime-main.74d44f3f.js",
     "runtime-main.js.map": "/aidm/static/js/runtime-main.74d44f3f.js.map",
     "static/js/2.ef6d63d8.chunk.js": "/aidm/static/js/2.ef6d63d8.chunk.js",
@@ -14,7 +14,7 @@
     "static/js/4.f39b33ff.chunk.js": "/aidm/static/js/4.f39b33ff.chunk.js",
     "static/js/4.f39b33ff.chunk.js.map": "/aidm/static/js/4.f39b33ff.chunk.js.map",
     "index.html": "/aidm/index.html",
-    "precache-manifest.e1267c87d5a96f457720bf0ab8a02a5f.js": "/aidm/precache-manifest.e1267c87d5a96f457720bf0ab8a02a5f.js",
+    "precache-manifest.c3d74b46a32200e65dfec3ad2a665505.js": "/aidm/precache-manifest.c3d74b46a32200e65dfec3ad2a665505.js",
     "service-worker.js": "/aidm/service-worker.js",
     "static/css/3.5db645d5.chunk.css.map": "/aidm/static/css/3.5db645d5.chunk.css.map",
     "static/css/4.3ede1354.chunk.css.map": "/aidm/static/css/4.3ede1354.chunk.css.map",
@@ -28,6 +28,6 @@
     "static/js/runtime-main.74d44f3f.js",
     "static/js/2.ef6d63d8.chunk.js",
     "static/css/main.f5c4d8e1.chunk.css",
-    "static/js/main.5c24f077.chunk.js"
+    "static/js/main.f5f06e79.chunk.js"
   ]
 }
