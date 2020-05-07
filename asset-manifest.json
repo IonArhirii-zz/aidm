@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/IonArhirii/aidm/static/css/main.f5c4d8e1.chunk.css",
+    "main.js": "/IonArhirii/aidm/static/js/main.d500119a.chunk.js",
+    "main.js.map": "/IonArhirii/aidm/static/js/main.d500119a.chunk.js.map",
+    "runtime-main.js": "/IonArhirii/aidm/static/js/runtime-main.09b6c4a0.js",
+    "runtime-main.js.map": "/IonArhirii/aidm/static/js/runtime-main.09b6c4a0.js.map",
+    "static/js/2.ef6d63d8.chunk.js": "/IonArhirii/aidm/static/js/2.ef6d63d8.chunk.js",
+    "static/js/2.ef6d63d8.chunk.js.map": "/IonArhirii/aidm/static/js/2.ef6d63d8.chunk.js.map",
+    "static/css/3.5db645d5.chunk.css": "/IonArhirii/aidm/static/css/3.5db645d5.chunk.css",
+    "static/js/3.690722d0.chunk.js": "/IonArhirii/aidm/static/js/3.690722d0.chunk.js",
+    "static/js/3.690722d0.chunk.js.map": "/IonArhirii/aidm/static/js/3.690722d0.chunk.js.map",
+    "static/css/4.3ede1354.chunk.css": "/IonArhirii/aidm/static/css/4.3ede1354.chunk.css",
+    "static/js/4.f39b33ff.chunk.js": "/IonArhirii/aidm/static/js/4.f39b33ff.chunk.js",
+    "static/js/4.f39b33ff.chunk.js.map": "/IonArhirii/aidm/static/js/4.f39b33ff.chunk.js.map",
+    "index.html": "/IonArhirii/aidm/index.html",
+    "precache-manifest.44460480059eecd980e510d7ed47b788.js": "/IonArhirii/aidm/precache-manifest.44460480059eecd980e510d7ed47b788.js",
+    "service-worker.js": "/IonArhirii/aidm/service-worker.js",
+    "static/css/3.5db645d5.chunk.css.map": "/IonArhirii/aidm/static/css/3.5db645d5.chunk.css.map",
+    "static/css/4.3ede1354.chunk.css.map": "/IonArhirii/aidm/static/css/4.3ede1354.chunk.css.map",
+    "static/css/main.f5c4d8e1.chunk.css.map": "/IonArhirii/aidm/static/css/main.f5c4d8e1.chunk.css.map",
+    "static/js/2.ef6d63d8.chunk.js.LICENSE.txt": "/IonArhirii/aidm/static/js/2.ef6d63d8.chunk.js.LICENSE.txt",
+    "static/media/loading.gif": "/IonArhirii/aidm/static/media/loading.750fc7f7.gif",
+    "static/media/looking_for_a_job.jpg": "/IonArhirii/aidm/static/media/looking_for_a_job.d0d626d9.jpg",
+    "static/media/male-icon.png": "/IonArhirii/aidm/static/media/male-icon.8110cf2c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.09b6c4a0.js",
+    "static/js/2.ef6d63d8.chunk.js",
+    "static/css/main.f5c4d8e1.chunk.css",
+    "static/js/main.d500119a.chunk.js"
+  ]
+}
