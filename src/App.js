@@ -16,9 +16,10 @@ import {initializeApp} from "./redux/appReducer";
 import store from "./redux/reduxStore";
 import {BrowserRouter} from "react-router-dom";
 import {withSuspense} from "./hoc/withSuspense";
+import ProfileContainer from "./components/profile/ProfileContainer";
 
 const DialogsContainer = React.lazy(() => import('./components/dialogs/DialogsContainer'));
-const ProfileContainer = React.lazy(() => import('./components/profile/ProfileContainer'));
+// const ProfileContainer = React.lazy(() => import('./components/profile/ProfileContainer'));
 
 class App extends React.Component {
   componentDidMount() {
@@ -40,7 +41,8 @@ class App extends React.Component {
               <Route path="/dialogs"
                      render={withSuspense(DialogsContainer)}/>
               <Route path="/profile/:userId?"
-                     render={withSuspense(ProfileContainer)}/>
+                     // render={withSuspense(ProfileContainer)}/>
+                     render={() => <ProfileContainer/>}/>
               <Route path="/users"
                      render={() => <UsersContainer/>}/>
               <Route path="/news" component={News}/>
