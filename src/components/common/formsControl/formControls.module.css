@@ -17,3 +17,7 @@
     padding: 5px;
     color: orangered;
 }
+
+.captchaImage {
+    width: auto;
+}
