@@ -8,9 +8,7 @@ import {Provider} from "react-redux";
 import {BrowserRouter} from "react-router-dom";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <SamuraiJSApp />
-  </React.StrictMode>,
+  <SamuraiJSApp />,
   document.getElementById('root')
 );
 
