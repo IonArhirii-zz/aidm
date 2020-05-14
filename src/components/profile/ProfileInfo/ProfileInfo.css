@@ -1,12 +1,23 @@
+.profile__avatar {
+  grid-area: avatar;
+  width: 120px;
+}
+
+.status__wrapper {
+  grid-area: status;
+}
+
+.profile__info {
+  grid-area: profileInfo;
+}
+
 .profile__inner {
   display: grid;
   grid-template-columns: 120px 1fr;
   grid-gap: 15px;
   font-size: 14px;
-}
-
-.profile__avatar {
-  width: 120px;
+  grid-template-areas: "avatar status" 
+                       "profileInfo profileInfo"
 }
 
 .profile__name {

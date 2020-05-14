@@ -17,3 +17,7 @@
 .selectedPage {
     font-weight: bold;
 }
+
+.pageNumber {
+    padding: 0 3px;
+}
